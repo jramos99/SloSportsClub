@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>SLO SPORTS CLUB</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script type="text/javascript">
+        // fuction to clear fields in login
+        function textClear(fieldText) {
+            if (fieldText.value == fieldText.defaultValue) {
+                fieldText.value = "";
+            }
+        }
+
+        // fuction to write default text in login if fields are empty
+        function defaultText(fieldText) {
+            if (fieldText.value == "") {
+                fieldText.value = fieldText.defaultValue;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="MainContainer">
+        <div id="Center">
+            <h1>SLO SPORTS CLUB</h1>
+            <div id="LoginBlock">
+                <div id="loginD">
+                    <form method="post" action="https://wager.slosportsclub.com/DefaultLogin.aspx">
+                        <div>
+                            <input type="hidden" name="siteID" id="siteID" value="1058" />
+                            <input type="hidden" name="errorURL" value="https://slosportsclub.com/?login-error" />
+                            <label id="FieldUsername"><input type="text" name="account" id="account" value="Username"
+                                    onblur="defaultText(this)" onfocus="textClear(this)" /></label>
+                            <label id="FieldPassword"><input type="password" name="password" id="password"
+                                    value="Password" onblur="defaultText(this)" onfocus="textClear(this)" /></label>
+                            <label id="FieldSubmit"><input type="submit" value="LOGIN"
+                                    onclick="if( account.value=='' || password.value==''){ alert('Verify your Login and/or Password!'); return false;}" /></label>
+                            <label id="LinkAgent"><a href="https://reports.slosportsclub.com" target="_blank">Agent
+                                    Login</a></label>
+                        </div>
+                    </form>
+                </div>
+                <div id="loginM">
+                    <form method="post" action="https://mobile.slosportsclub.com/DefaultLogin.aspx">
+                        <div>
+                            <input type="hidden" name="siteID" id="siteID" value="1058" />
+                            <input type="hidden" name="errorURL" value="https://slosportsclub.com/?login-error" />
+                            <label id="FieldUsername"><input type="text" name="account" id="account" value="Username"
+                                    onblur="defaultText(this)" onfocus="textClear(this)" /></label>
+                            <label id="FieldPassword"><input type="password" name="password" id="password"
+                                    value="Password" onblur="defaultText(this)" onfocus="textClear(this)" /></label>
+                            <label id="FieldSubmit"><input type="submit" value="login"
+                                    onclick="if( account.value=='' || password.value==''){ alert('Verify your Login and/or Password!'); return false;}" /></label>
+                            <label id="LinkAgent"><a href="https://reports.slosportsclub.com" target="_blank">Agent
+                                    Login</a></label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
